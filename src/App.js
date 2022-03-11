@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // components
 import Header from "./components/Header";
@@ -17,11 +16,16 @@ const SPECIAL_KEYS = ["="];
 
 function App() {
   const [displayValue, setDisplayValue] = useState("");
+  const [theme, setTheme] = useState("theme-1");
+
+  useEffect(() => {
+    setTheme(localStorage.getItem("theme"));
+  }, []);
 
   return (
-    <div className="App">
+    <div className="App" data-theme={theme}>
       <Header>
-        <ThemeSwitch />
+        <ThemeSwitch setTheme={setTheme} />
       </Header>
       <Display displayValue={displayValue} />
       <KeyPad>

@@ -1,0 +1,72 @@
+:root {
+  /* backgrounds */
+  --bg-main: hsl(222, 26%, 31%);
+  --bg-screen: hsl(224, 36%, 15%);
+  --bg-keypad: hsl(223, 31%, 20%);
+
+  /* keys */
+  --bg-key: hsl(30, 25%, 89%);
+  --bg-key-shadow: hsl(28, 16%, 65%);
+  --bg-text-key: hsl(225, 21%, 49%);
+  --bg-text-key-shadow: hsl(224, 28%, 35%);
+  --bg-special-key: hsl(6, 63%, 50%);
+  --bg-special-key-shadow: hsl(6, 70%, 34%);
+
+  /* text */
+  --clr-key: hsl(221, 14%, 31%);
+  --clr-text-key: hsl(0, 0%, 100%);
+  --clr-special-key: hsl(0, 0%, 100%);
+  --clr-text: hsl(0, 0%, 100%);
+}
+
+[data-theme="theme-2"] {
+  --bg-main: hsl(0, 0%, 90%);
+  --bg-screen: hsl(0, 5%, 81%);
+  --bg-keypad: hsl(0, 0%, 93%);
+
+  --bg-key: hsl(45, 7%, 89%);
+  --bg-key-shadow: hsl(35, 11%, 61%);
+  --bg-text-key: hsl(185, 42%, 37%);
+  --bg-text-key-shadow: hsl(185, 58%, 25%);
+  --bg-special-key: hsl(25, 98%, 40%);
+  --bg-special-key-shadow: hsl(25, 99%, 27%);
+
+  --clr-key: hsl(60, 10%, 19%);
+  --clr-text-key: hsl(0, 0%, 100%);
+  --clr-special-key: hsl(0, 0%, 100%);
+  --clr-text: hsl(60, 10%, 19%);
+
+}
+
+[data-theme="theme-3"] {
+  --bg-main: hsl(268, 75%, 9%);
+  --bg-screen: hsl(268, 71%, 12%);
+  --bg-keypad: hsl(268, 71%, 12%);
+
+  --bg-key: hsl(268, 47%, 21%);
+  --bg-key-shadow: hsl(290, 70%, 36%);
+  --bg-text-key: hsl(281, 89%, 26%);
+  --bg-text-key-shadow: hsl(285, 91%, 52%);
+  --bg-special-key: hsl(176, 100%, 44%);
+  --bg-special-key-shadow: hsl(177, 92%, 70%);
+
+  --clr-key: hsl(52, 100%, 62%);
+  --clr-text-key: hsl(0, 0%, 100%);
+  --clr-special-key: hsl(198, 20%, 13%);
+  --clr-text: hsl(52, 100%, 62%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  display: grid;
+  font-size: 2rem;
+  font-family: 'Spartan', sans-serif;
+  min-height: 100vh;
+  place-content: center;
+}

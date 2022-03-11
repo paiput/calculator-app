@@ -1,9 +1,17 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-function Header() {
+function Header({ children }) {
   return (
-    <header></header>
+    <header>
+      <span>calc</span>
+      {children}
+    </header>
   );
 }
+
+Header.propTypes = {
+  children: PropTypes.any.isRequired
+};
 
 export default Header;

@@ -1,0 +1,7 @@
+.display {
+  background-color: var(--bg-screen);
+  border-radius: 5px;
+  color: var(--clr-text);
+  padding: .6em;
+  text-align: right;
+}

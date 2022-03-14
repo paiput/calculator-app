@@ -63,10 +63,6 @@
 }
 
 body {
-  background-color: var(--bg-main);
-  display: grid;
   font-size: 2rem;
   font-family: 'Spartan', sans-serif;
-  min-height: 100vh;
-  place-content: center;
 }

@@ -8,12 +8,7 @@ import KeyPad from "./components/KeyPad";
 import Key from "./components/Key";
 import ThemeSwitch from "./components/ThemeSwitch";
 
-const DEFAULT_KEYS = [
-  "1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
-  "+", "-", "x", "/", "."
-];
-const TEXT_KEYS = ["DEL", "RESET"];
-const SPECIAL_KEYS = ["="];
+const OPERANDS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
 function App() {
   const [displayValue, setDisplayValue] = useState("");
@@ -23,6 +18,22 @@ function App() {
     setTheme(localStorage.getItem("theme"));
   }, []);
 
+  const appendNumber = (number) => {
+    setDisplayValue(prevValue => prevValue + number);
+  };
+
+  const deleteNumber = () => {
+    setDisplayValue(prevValue => prevValue.slice(0, -1));
+  };
+
+  const resetDisplay = () => {
+    setDisplayValue("");
+  };
+
+  const calcResult = () => {
+    //...
+  };
+
   return (
     <div className="App" data-theme={theme}>
       <Header>
@@ -30,21 +41,35 @@ function App() {
       </Header>
       <Display displayValue={displayValue} />
       <KeyPad>
-        {DEFAULT_KEYS.map(character =>
-          <Key key={character} type="default" setDisplayValue={setDisplayValue}>
+        {OPERANDS.map(character => 
+          <Key key={character} id={`key-${character}`} handleClick={appendNumber}>
             {character}
-          </Key>
+          </Key>  
         )}
-        {TEXT_KEYS.map(character =>
-          <Key key={character} type="text" setDisplayValue={setDisplayValue}>
-            {character}
-          </Key>
-        )}
-        {SPECIAL_KEYS.map(character =>
-          <Key key={character} type="special" setDisplayValue={setDisplayValue}>
-            {character}
-          </Key>
-        )}
+        <Key id="key-sum">
+          +
+        </Key>
+        <Key id="key-subtraction">
+          -
+        </Key>
+        <Key id="key-multiplication">
+          x
+        </Key>
+        <Key id="key-division">
+          /
+        </Key>
+        <Key id="key-dot">
+          .
+        </Key>
+        <Key id="key-delete" type="text" handleClick={deleteNumber}>
+          DEL
+        </Key>
+        <Key id="key-reset" type="text" large handleClick={resetDisplay}>
+          RESET
+        </Key>
+        <Key id="key-equals" type="special" large handleClick={calcResult}>
+          =
+        </Key>
       </KeyPad>
     </div>
   );

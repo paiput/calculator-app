@@ -22,3 +22,25 @@
   box-shadow: inset 0 -5px 0 0 var(--bg-special-key-shadow);
   color: var(--clr-special-key);
 }
+
+#key-0 { grid-area: key-0; }
+#key-1 { grid-area: key-1; }
+#key-2 { grid-area: key-2; }
+#key-3 { grid-area: key-3; }
+#key-4 { grid-area: key-4; }
+#key-5 { grid-area: key-5; }
+#key-6 { grid-area: key-6; }
+#key-7 { grid-area: key-7; }
+#key-8 { grid-area: key-8; }
+#key-9 { grid-area: key-9; }
+
+#key-dot { grid-area: key-dot; }
+#key-division { grid-area: key-division; }
+#key-multiplication { grid-area: key-multiplication; }
+#key-subtraction { grid-area: key-subtraction; }
+#key-sum { grid-area: key-sum; }
+
+#key-reset { grid-area: key-reset; }
+#key-delete { grid-area: key-delete; }
+
+#key-equals { grid-area: key-equals; }

@@ -2,13 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./key.module.css";
 
-function Key({ children, type = "default", setDisplayValue }) {
-  const handleClick = () => {
-    setDisplayValue(children);
-  }; 
-
+function Key({ 
+  children, 
+  type,
+  large,
+  id,
+  handleClick 
+}) {
   return (
-    <button className={styles[`${type}`]} onClick={handleClick}>
+    <button id={styles[id]} className={`${type ? styles[type] : styles.default} ${large ? styles.large : ""}`} onClick={() => handleClick(children)}>
       {children}
     </button>
   );
@@ -17,7 +19,9 @@ function Key({ children, type = "default", setDisplayValue }) {
 Key.propTypes = {
   children: PropTypes.string.isRequired,
   type: PropTypes.string,
-  setDisplayValue: PropTypes.func.isRequired
+  large: PropTypes.bool,
+  id: PropTypes.string,
+  handleClick: PropTypes.func.isRequired
 };
 
 export default Key;

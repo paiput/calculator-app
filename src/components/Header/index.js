@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from "./header.module.css";
 
 function Header({ children }) {
   return (
-    <header>
-      <span>calc</span>
+    <header className={styles.header}>
+      <h1>calc</h1>
       {children}
     </header>
   );

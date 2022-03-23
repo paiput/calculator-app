@@ -1,0 +1,9 @@
+:local h1 {
+  color: var(--clr-text);
+  margin-bottom: -.5em;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}

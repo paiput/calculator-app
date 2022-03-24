@@ -4,8 +4,7 @@ import styles from "./display.module.css";
 
 function Display({ displayValue, inputValue, operator, error }) {
   const numberWithCommas = (number) => {
-    // make it not add the commas to numbers after a dot.
-    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return number.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
   };
 
   return (

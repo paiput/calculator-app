@@ -1,4 +1,4 @@
-:global .App {
+:global .calculator {
   background-color: var(--bg-main);
   display: grid;
   min-height: 100vh;

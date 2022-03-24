@@ -8,6 +8,8 @@ function ThemeSwitch({ setTheme }) {
     localStorage.setItem("theme", event.target.value);
   };
 
+  const getTheme = () => localStorage.getItem("theme");
+
   return (
     <div className={styles.themeSwitchContainer}>
       <h3 className={styles.title}>theme</h3>
@@ -17,6 +19,7 @@ function ThemeSwitch({ setTheme }) {
           name="theme-switch" 
           type="radio"
           value="theme-1"
+          defaultChecked={getTheme() === "theme-1"}
           onClick={handleCheck}
         />
         <label htmlFor={styles.theme1}>1</label>
@@ -25,6 +28,7 @@ function ThemeSwitch({ setTheme }) {
           name="theme-switch"
           type="radio"
           value="theme-2"
+          defaultChecked={getTheme() === "theme-2"}
           onClick={handleCheck}
         />
         <label htmlFor={styles.theme2}>2</label>
@@ -33,6 +37,7 @@ function ThemeSwitch({ setTheme }) {
           name="theme-switch" 
           type="radio"
           value="theme-3"
+          defaultChecked={getTheme() === "theme-3"}
           onClick={handleCheck}
         />
         <label htmlFor={styles.theme3}>3</label>

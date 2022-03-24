@@ -10,7 +10,11 @@ function Key({
   handleClick 
 }) {
   return (
-    <button id={styles[id]} className={`${type ? styles[type] : styles.default} ${large ? styles.large : ""}`} onClick={() => handleClick(children)}>
+    <button 
+      id={styles[id]} 
+      className={`${type ? styles[type] : styles.default} ${large ? styles.large : ""}`} 
+      onClick={() => handleClick(children)}
+    >
       {children}
     </button>
   );

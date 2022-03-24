@@ -10,5 +10,5 @@
     "key-dot    key-0      key-division  key-multiplication"
     "key-reset  key-reset  key-equals    key-equals";
   grid-template-columns: repeat(4, 1fr);
-  padding: 1rem;
+  padding: .75em;
 }

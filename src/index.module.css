@@ -17,6 +17,8 @@
   --clr-text-key: hsl(0, 0%, 100%);
   --clr-special-key: hsl(0, 0%, 100%);
   --clr-text: hsl(0, 0%, 100%);
+
+  --hsl-text: 0, 0%, 100%;
 }
 
 [data-theme="theme-2"] {
@@ -36,6 +38,7 @@
   --clr-special-key: hsl(0, 0%, 100%);
   --clr-text: hsl(60, 10%, 19%);
 
+  --hsl-text: 60, 10%, 19%;
 }
 
 [data-theme="theme-3"] {
@@ -54,10 +57,13 @@
   --clr-text-key: hsl(0, 0%, 100%);
   --clr-special-key: hsl(198, 20%, 13%);
   --clr-text: hsl(52, 100%, 62%);
+
+  --hsl-text: 52, 100%, 62%;
 }
 
 * {
   box-sizing: border-box;
+  font: inherit;
   margin: 0;
   padding: 0;
 }

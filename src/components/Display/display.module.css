@@ -50,5 +50,6 @@
   align-items: center;
   display: flex;
   height: 100%;
+  margin-top: 6px;
   text-align: left;
 }

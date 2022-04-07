@@ -78,10 +78,3 @@ body {
     font-size: 1.5rem;
   }
 }
-
-:global #root {
-  background-color: var(--bg-main);
-  display: grid;
-  min-height: 100vh;
-  place-content: center;
-}

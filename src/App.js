@@ -74,48 +74,50 @@ function App() {
   };
 
   return (
-    <div className="calculator" data-theme={theme}>
-      <Header>
-        <ThemeSwitch setTheme={setTheme} />
-      </Header>
-      <Display 
-        displayValue={displayValue} 
-        inputValue={inputValue} 
-        showOperation={showOperation}
-        operator={operator}
-        error={error}
-      />
-      <KeyPad>
-        {OPERANDS.map(character => 
-          <Key key={character} id={`key-${character}`} handleClick={appendDigit}>
-            {character}
-          </Key>  
-        )}
-        <Key id="key-sum" handleClick={handleOperation}>
-          +
-        </Key>
-        <Key id="key-subtraction" handleClick={handleOperation}>
-          -
-        </Key>
-        <Key id="key-multiplication" handleClick={handleOperation}>
-          x
-        </Key>
-        <Key id="key-division" handleClick={handleOperation}>
-          /
-        </Key>
-        <Key id="key-dot" handleClick={appendDigit}>
-          .
-        </Key>
-        <Key id="key-delete" type="text" handleClick={deleteNumber}>
-          del
-        </Key>
-        <Key id="key-reset" type="text" large handleClick={resetDisplay}>
-          reset
-        </Key>
-        <Key id="key-equals" type="special" large handleClick={calcResult}>
-          =
-        </Key>
-      </KeyPad>
+    <div className="App" data-theme={theme}>
+      <div className="calculator">        
+        <Header>
+          <ThemeSwitch setTheme={setTheme} />
+        </Header>
+        <Display 
+          displayValue={displayValue} 
+          inputValue={inputValue} 
+          showOperation={showOperation}
+          operator={operator}
+          error={error}
+        />
+        <KeyPad>
+          {OPERANDS.map(character => 
+            <Key key={character} id={`key-${character}`} handleClick={appendDigit}>
+              {character}
+            </Key>  
+          )}
+          <Key id="key-sum" handleClick={handleOperation}>
+            +
+          </Key>
+          <Key id="key-subtraction" handleClick={handleOperation}>
+            -
+          </Key>
+          <Key id="key-multiplication" handleClick={handleOperation}>
+            x
+          </Key>
+          <Key id="key-division" handleClick={handleOperation}>
+            /
+          </Key>
+          <Key id="key-dot" handleClick={appendDigit}>
+            .
+          </Key>
+          <Key id="key-delete" type="text" handleClick={deleteNumber}>
+            del
+          </Key>
+          <Key id="key-reset" type="text" large handleClick={resetDisplay}>
+            reset
+          </Key>
+          <Key id="key-equals" type="special" large handleClick={calcResult}>
+            =
+          </Key>
+        </KeyPad>
+      </div>
     </div>
   );
 }

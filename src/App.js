@@ -13,6 +13,7 @@ const OPERANDS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 function App() {
   const [displayValue, setDisplayValue] = useState("");
   const [inputValue, setInputValue] = useState("");
+  const [showOperation, setShowOperation] = useState(true);
   const [operator, setOperator] = useState("");
   const [error, setError] = useState("");
   const [theme, setTheme] = useState("theme-1");
@@ -35,16 +36,15 @@ function App() {
     setInputValue("");
     setOperator("");
     setError("");
+    setShowOperation(true);
   };
 
   const handleOperation = (selectedOperator) => {
-    if (operator) {
-      setOperator(selectedOperator);
-      setDisplayValue("");
-      return;
+    if (!operator) {
+      setInputValue(displayValue);
     }
+    setShowOperation(true);
     setOperator(selectedOperator);
-    setInputValue(displayValue);
     setDisplayValue("");
   };
   
@@ -69,6 +69,7 @@ function App() {
       setError("Error: math error");
     }
 
+    setShowOperation(false);
     setInputValue("" + result);
   };
 
@@ -80,6 +81,7 @@ function App() {
       <Display 
         displayValue={displayValue} 
         inputValue={inputValue} 
+        showOperation={showOperation}
         operator={operator}
         error={error}
       />

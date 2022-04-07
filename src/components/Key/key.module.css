@@ -1,7 +1,7 @@
 .default {
   background-color: var(--bg-key);
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: inset 0 -5px 0 0 var(--bg-key-shadow);
   color: var(--clr-key);
   cursor: pointer;
@@ -25,7 +25,7 @@
   background-color: var(--bg-text-key);
   box-shadow: inset 0 -5px 0 0 var(--bg-text-key-shadow);
   color: var(--clr-text-key);
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 

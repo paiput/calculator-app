@@ -1,14 +1,18 @@
 .display {
+  align-items: flex-end;
   background-color: var(--bg-screen);
   border-radius: 5px;
   color: var(--clr-text);
+  display: flex;
+  flex-direction: column;
   font: inherit;
-  height: 6rem;
+  height: 7rem;
+  justify-content: center;
   margin-block: 1.5rem 1rem;
   max-width: 485px;
   overflow-x: scroll;
   overflow-y: hidden;
-  padding: .75em;
+  padding: 1.35rem 1.35rem calc(1.35rem - 12px);
   text-align: right;
 }
 
@@ -28,7 +32,7 @@
 }
 
 .display.reduced {
-  padding: .5em;
+  padding: 1.25rem 1.25rem calc(1.25rem - 12px);
 }
 
 .displayValue {
@@ -36,7 +40,7 @@
 }
 
 .display.reduced .displayValue {
-  font-size: 1em;
+  font-size: 1.25em;
 }
 
 .inputValue {

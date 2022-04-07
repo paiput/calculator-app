@@ -9,6 +9,12 @@
   padding: .4em 1em;
 }
 
+@media (max-width: 540px) {
+  .default {
+    padding: .4em .5em;
+  }
+}
+
 .default:active {
   transform: translateY(2px) scale(.99);
   box-shadow: inset 0 -3px 0 0 var(--bg-key-shadow);

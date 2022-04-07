@@ -12,3 +12,10 @@
   grid-template-columns: repeat(4, 1fr);
   padding: .75em;
 }
+
+@media (max-width: 540px) {
+  .wrapper {
+    gap: .75rem;
+    padding: .65em;
+  }
+}
